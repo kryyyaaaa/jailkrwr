@@ -80,6 +80,7 @@
     <script>
         function showpage(pg) {
             document.getElementById("main").style.display = "none";
+            document.getElementById("troll").style.display = "none";
             document.getElementById(pg).style.display = "block";
         }
 
@@ -104,6 +105,10 @@
 <body>
     <div id="main">
         <script>
+
+            function installcd() {
+                window.open('https://www.cydiafree.com/start/CydiaFreeDemoVerified.mobileconfig');
+            }
 
             function getIOSVersion() {
                 const userAgent = window.navigator.userAgent;
@@ -139,25 +144,25 @@ thats all`);
                     await sleep(1000); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Installing...';
                     await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[WARN] Testing...';
                     await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] successful';
-                    await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running sileo helper';
+                    await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running Cydia helper';
                     await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Using the default password "alpine"';
-                    await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running the command: dpkg -i sileo';
-                    await sleep(1500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running the command: dpkg -u sileo';
+                    await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running the command: dpkg -i Cydia';
+                    await sleep(1500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Running the command: dpkg -u Cydia';
                     await sleep(500); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] All done!';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
-                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] sileo installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
+                    await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] Cydia installing...';
                     await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[LOG] successfuly installed!';
                     await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[WARN] try to boot...';
                     await sleep(100); document.getElementById("log").innerText = document.getElementById("log").innerText + '\n[WARN] try to boot...';
-                    disableScroll();
                     showpage("troll");
-                    alert('reboot please')
+                    disableScroll();
+                    alert('Install Cydia, than reboot your device.')
                 }
             }
         </script>
@@ -165,14 +170,16 @@ thats all`);
 
         <h1 style="text-align: center;">KRWR iOS 11.0-17.x.x</h1>
         <h2 style="text-align: center;">for CPUs A12-A17 and M1</h2>
-        <h2 style="text-align: center;"><a href="about.html">about</a></h2>
+        <h3 style="text-align: center;"><a href="about.html">about</a></h3>
         <p style="text-align: center;"><button style="margin-top: 64px;" onclick="installjb();">
                 <h1>Jailbreak</h1>
             </button></p>
         <h4 id="log">Log:</h4>
     </div>
     <div id="troll">
-        <h1> </h1>
+        <p style="text-align: center;"><button style="margin-top: 64px;" onclick="installcd();">
+                <h1>Get Cydia</h1>
+            </button></p>
     </div>
     <script>
         showpage("main");
